@@ -68,17 +68,28 @@ public class Main {
 
         //task 7
         int temp;
-        for (int i = 0, j = oldArr.length -1; i<j; i++, j--) {
+        for (int i = 0, j = oldArr.length - 1; i < j; i++, j--) {
             temp = oldArr[i];
             oldArr[i] = oldArr[j];
-            oldArr[j]=temp;
+            oldArr[j] = temp;
         }
         System.out.println(Arrays.toString(oldArr));
         System.out.println();
 
-
-
+        //task 9
+        number = -2;
+        int[] array = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        Arrays.sort(array);
+        for (int k : array) {
+            for (int j = (array.length - 1) / 2; j >= 0; j--) {
+                if (k + array[j] == number) {
+                    System.out.println("Найденные числа: " + k + " " + array[j]);
+                }
+            }
+        }
+        System.out.println(Arrays.toString(array));
     }
+
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
