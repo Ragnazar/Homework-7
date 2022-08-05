@@ -4,20 +4,20 @@ public class Main {
 
         //task 1
         int sum = 0;
-        for (int i = 0; i <= generateRandomArray().length - 1; i++) {
+        for (int i = 0; i <= arr.length - 1; i++) {
             sum = sum + arr[i];
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
         //task2
-        int payMin = 300000;
-        int payMax = -1;
-        for (int i = 0; i <= generateRandomArray().length - 1; i++) {
+        int payMin = arr[0];
+        int payMax = arr[0];
+        for (int i = 0; i <= arr.length - 1; i++) {
             if (payMin > arr[i]) {
                 payMin = arr[i];
             }
         }
-        for (int i = 0; i <= generateRandomArray().length - 1; i++) {
+        for (int i = 0; i <= arr.length - 1; i++) {
             if (payMax < arr[i]) {
                 payMax = arr[i];
             }
