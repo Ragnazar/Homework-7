@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         int[] arr = generateRandomArray();
@@ -32,6 +34,49 @@ public class Main {
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println();
+
+        //task5
+        int number = 1;
+        int[][] matrix = new int[3][3];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (i == j) {
+                    matrix[i][j] = number;
+                }
+                if (j == matrix.length - 1 - i) {
+                    matrix[i][j] = number;
+                }
+            }
+        }
+        for (int[] row : matrix) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+
+        //task 6
+        int[] oldArr = {5, 4, 3, 2, 1};
+        int[] newArr = new int[oldArr.length];
+        System.out.println(Arrays.toString(oldArr));
+        for (int i = 0; i < oldArr.length; i++) {
+            newArr[oldArr.length - 1 - i] = oldArr[i];
+        }
+        System.out.println(Arrays.toString(newArr));
+        System.out.println();
+
+        //task 7
+        int temp;
+        for (int i = 0, j = oldArr.length -1; i<j; i++, j--) {
+            temp = oldArr[i];
+            oldArr[i] = oldArr[j];
+            oldArr[j]=temp;
+        }
+        System.out.println(Arrays.toString(oldArr));
+        System.out.println();
+
+
 
     }
     public static int[] generateRandomArray() {
